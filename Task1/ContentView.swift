@@ -30,7 +30,7 @@ struct ContentView: View {
     // Function that excecutes on onSubmit event and handles app flow
     private func addService() {
         // Change showAlert value and prevents form submitting when name is missing or date is previous or equal to current date
-        if serviceName.isEmpty || serviceDate<Date() {
+        if serviceName.isEmpty || serviceDate<Date() || serviceDescription.isEmpty {
             showAlert = true
         } else {
             // Adds service using the ServicesViewModel.addService method
