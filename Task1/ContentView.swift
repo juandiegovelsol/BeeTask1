@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = ServicesViewModel()
-    @State private var serviceNam = ""
+    @State private var serviceName = ""
     @State private var serviceDate = Date()+3600*24
     @State private var serviceDescription = "Description"
     @State private var showAlert = false
