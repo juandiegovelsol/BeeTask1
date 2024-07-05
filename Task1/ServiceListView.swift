@@ -1,9 +1,10 @@
 import SwiftUI
-
-struct ServiceEntryListView: View {
+//Creates the structure to display the services data
+struct ServiceListView: View {
     let services: [Service]
     
     var body: some View {
+        //Iterates the services array to display info
         List(services) { service in
             VStack(alignment: .leading) {
                 Text(service.name)
@@ -16,7 +17,7 @@ struct ServiceEntryListView: View {
         }
     }
 }
-
+//Creates a date formatter to display d/m/y date format
 extension DateFormatter {
     static let shortDate: DateFormatter = {
         let formatter = DateFormatter()
